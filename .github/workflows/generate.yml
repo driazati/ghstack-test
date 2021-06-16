@@ -20,8 +20,8 @@ jobs:
           echo 'meow'
           echo 'alllright'
           echo "::set-output name=random-id::$(echo $RANDOM)"
-          echo "::warning file=app.js,line=1,col=5::Missing semicolon"
-          echo "::error file=app.js,line=10,col=15::Something went wrong"
+          echo "::warning file=test.py,line=1,col=2::Missing semicolon"
+          echo "::error file=test.py,line=3,col=2::Something went wrong"
           echo 'alllright'
           echo 'alllright'
           echo 'alllright'
