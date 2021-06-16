@@ -1,0 +1,27 @@
+name: Re-generate list
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    # Every monday
+    - cron: "0 0 * * 1"
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Say hi
+        run: |
+          echo 'meow'
+          echo "::set-output name=random-id::$(echo $RANDOM)"
+          echo "::warning file=app.js,line=1,col=5::Missing semicolon"
+          echo "::error file=app.js,line=10,col=15::Something went wrong"
+
+    outputs:
+      random: "ok"
+      sum: "wow"
