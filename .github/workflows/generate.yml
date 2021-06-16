@@ -18,9 +18,17 @@ jobs:
       - name: Say hi
         run: |
           echo 'meow'
+          echo 'alllright'
           echo "::set-output name=random-id::$(echo $RANDOM)"
           echo "::warning file=app.js,line=1,col=5::Missing semicolon"
           echo "::error file=app.js,line=10,col=15::Something went wrong"
+          echo 'alllright'
+          echo 'alllright'
+          echo 'alllright'
+          echo 'alllright'
+          echo 'alllright'
+          echo 'alllright'
+          echo 'alllright'
 
     outputs:
       random: "ok"
