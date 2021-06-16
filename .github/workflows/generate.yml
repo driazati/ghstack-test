@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - master
-  schedule:
-    # Every monday
-    - cron: "0 0 * * 1"
+  pull_request:
+
 jobs:
   generate:
     runs-on: ubuntu-latest
